@@ -259,6 +259,177 @@ router.delete("/apikey", async(req, res, next) => {
  }
 });
 
+//━━━━━━━━━━━━━━━[ ASUPAN ]━━━━━━━━━━━━━━━━━//
+router.get('/asupan/cecan', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/cecan.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/hijaber', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/hijaber.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+  res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/asupan', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/asupan.js`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/rikagusriani', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/asupan/rikagusriani.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/santuy', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/santuy.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/ukhty', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/ukhty.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/bocil', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/bocil.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+router.get('/asupan/gheayubi', async (req, res, next) => {
+var apikey = req.query.apikey
+if(!apikey) return res.sendFile(__path + '/docs/403.html')
+if(listkey.includes(apikey)){
+fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/geayubi.json`))
+.then(response => response.json())
+.then(async data => {
+var result = data[Math.floor(Math.random() * data.length)];
+var buffer = result.url;
+data = await fetch(buffer).then(v => v.buffer())
+await fs.writeFileSync(__path +'/tmp/chika.mp4', data)
+res.sendFile(__path+'/tmp/chika.mp4')
+})
+.catch(e => {
+console.log(e);
+res.sendFile(__path + '/docs/503.html')
+})
+} else {
+res.sendFile(__path + '/docs/403.html')
+}
+})
+
+
 router.get('/game/family100', async (req, res, next) => {
     var Apikey = req.query.apikey
 
